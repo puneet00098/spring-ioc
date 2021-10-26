@@ -20,12 +20,20 @@ public class IocExampleApplication {
 
 		ConfigurableApplicationContext ctx =
 				SpringApplication.run(IocExampleApplication.class, args);
-		
+
 		System.out.println(ctx.getClass().getName());
-		
+
 		Review objRef = ctx.getBean("reviewBean",Review.class);
-		
+
 		System.out.println(objRef);
+
+		// accessing by passing class reference and id
+
+		Review objRef2 =ctx.getBean("reviewBean",Review.class);
+		System.out.println(objRef2);
+		
+		Review sangeetha = ctx.getBean("foodReview",Review.class);
+		System.out.println(sangeetha);
 
 	}
 
