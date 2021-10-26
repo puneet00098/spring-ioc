@@ -34,6 +34,12 @@ public class IocExampleApplication {
 		
 		Review sangeetha = ctx.getBean("foodReview",Review.class);
 		System.out.println(sangeetha);
+		
+		
+		Review objRef3 = (Review) ctx.getBean("reviewBean");
+		System.out.println(objRef3);
+		
+		System.out.println(ctx.getBean("infoDto"));
 
 	}
 
