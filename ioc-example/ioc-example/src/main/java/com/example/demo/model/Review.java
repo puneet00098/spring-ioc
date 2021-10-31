@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Data
@@ -14,14 +15,13 @@ import lombok.experimental.FieldDefaults;
 
 @Component("reviewBean")
 public class Review {
-	
+
 	int id;
 	String restaurantName;
 	String reviewedBy;
 	String reviewAspect;
 	String reviewBody;
 	double reviewRating;
-	
 	public Review() {
 		super();
 
@@ -29,6 +29,4 @@ public class Review {
 	}
 
 	
-	
-
 }
